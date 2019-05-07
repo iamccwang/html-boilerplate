@@ -5,7 +5,7 @@ const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
-const webpackConfig = {
+const webpackConfig = (env, argv) => ({
     entry: "./src/scripts/main.js",
     output: {
         path: path.join(__dirname, "./public"),
@@ -32,7 +32,7 @@ const webpackConfig = {
         contentBase: path.join(__dirname, "./public"),
         publicPath: "/"
     },
-    devtool: "cheap-module-eval-source-map",
+    devtool: (argv.mode === 'production') ? false : "cheap-module-eval-source-map",
     plugins:[
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
@@ -50,6 +50,6 @@ const webpackConfig = {
             new OptimizeCSSAssetsPlugin()
         ]
     }
-};
+});
 
 module.exports = webpackConfig;
