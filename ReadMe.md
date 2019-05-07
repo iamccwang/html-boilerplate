@@ -1,6 +1,6 @@
 # HTML Boilerplate 
 
-Make a boilerplate to start a html web app project eaiser.
+Make a boilerplate to start a html web app project easier.
 
 ## Install Dev Tool Packages
 
