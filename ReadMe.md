@@ -2,7 +2,7 @@
 
 Make a boilerplate to start a html web app project eaiser.
 
-## Setup project folder
+## Install Dev Tool Packages
 
 Initialize npm and install development tools
 ```
