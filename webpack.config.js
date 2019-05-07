@@ -46,8 +46,14 @@ const webpackConfig = (env, argv) => ({
     ],
     optimization: {
         minimizer: [
-            new TerserWebpackPlugin(),
-            new OptimizeCSSAssetsPlugin()
+            new TerserWebpackPlugin({
+                terserOptions: { output: { comments: false } }
+            }),
+            new OptimizeCSSAssetsPlugin({
+                cssProcessorPluginOptions: {
+                    preset: ['default', { discardComments: { removeAll: true } }],
+                }
+            })
         ]
     }
 });
