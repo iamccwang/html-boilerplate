@@ -41,7 +41,7 @@ npm install --save-dev html-webpack-plugin clean-webpack-plugin mini-css-extract
 ├── src                     # source content folder
 │   ├── styles              # client side image files
 │   └── scripts             # client side js file
-├── templates                # html templates
+├── templates               # html templates
 ├── package.json            
 ├── package-lock.json
 ├── ReadMe.md          
